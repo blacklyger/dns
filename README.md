@@ -88,6 +88,12 @@ src/
 └── records.rs   Zone file parser and lookup
 ```
 
+## Project history
+
+- **2023-06-29**: Project started: asynchronous UDP server with tokio and parsing of the DNS header
+- **2023-07-23**: DNS message model (header, question, resource records), local A records, forwarding of other queries to an upstream resolver
+- **2026-10-24**: Security hardening (panic-free parser, anti-spoofing forwarder, concurrent handling), zone file, CLI options, tests and documentation
+
 ## Limitations
 
 - UDP only. If an upstream answer is truncated (TC bit), it is passed on, but the TCP retry is not served.
