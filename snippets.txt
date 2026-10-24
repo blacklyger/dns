@@ -1,3 +1,0 @@
-for (a, b) in packet_bytes[..2].iter_mut().zip(convert16to8(id)) {
-    *a = b;
-}

@@ -1,12 +1,16 @@
 [package]
 name = "dns"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+description = "Small asynchronous DNS server with local records and a hardened upstream forwarder"
 
 [dependencies]
-tokio = { version = "1.28.2", features = ["full"] }
-rustc-hash = "1.1"
-parking_lot = "0.12.1"
+tokio = { version = "1.28.2", features = ["macros", "net", "rt-multi-thread", "sync", "time"] }
 anyhow = "1.0.71"
+rand = "0.8.5"
+
+[dev-dependencies]
+tokio = { version = "1.28.2", features = ["test-util"] }
+
+[profile.release]
+lto = true

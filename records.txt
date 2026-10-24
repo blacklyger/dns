@@ -1,0 +1,6 @@
+# Local zone for the DNS server: one record per line.
+#
+# name                 type   value            [ttl, default 300]
+mydomain.simoin        A      1.2.3.4
+mydomain.simoin        AAAA   2001:db8::1234   600
+router.home.arpa       A      192.168.0.1
